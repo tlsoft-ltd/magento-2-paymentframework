@@ -1,8 +1,9 @@
 {
   "name": "tlsoft/paymentframework",
   "version": "0.0.1",
-  "description": "Main module for TLSoft Payment Gateways.",
+  "description": "Main module for TLSoft Magento2 Payment Gateways.",
   "type": "magento2-module",
+  "minimum-stability": "stable",
   "require": {
     "php": "~7.3.0||~7.4.0",
     "magento/framework": "~103.0.1",
