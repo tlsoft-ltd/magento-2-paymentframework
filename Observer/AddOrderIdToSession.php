@@ -28,15 +28,10 @@ use Magento\Customer\Model\Session\Storage as CustomerSession;
 /**
  * AddOrderIdToSession
  *
+ * @property CustomerSession $customerSession
  */
 class AddOrderIdToSession implements ObserverInterface
 {
-    /**
-     * Customer Session
-     *
-     * @var CustomerSession
-     */
-    private $customerSession;
 
     public function __construct(CustomerSession $customerSession)
     {
@@ -50,7 +45,7 @@ class AddOrderIdToSession implements ObserverInterface
      *
      * @return void
      */
-    public function execute(Observer $observer)
+    public function execute(Observer $observer): void
     {
         $customerSession = $this->customerSession;
         $order = $observer->getEvent()->getOrder();
