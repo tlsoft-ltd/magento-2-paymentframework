@@ -33,6 +33,8 @@ use Magento\Customer\Model\Session\Storage as CustomerSession;
 class AddOrderIdToSession implements ObserverInterface
 {
 
+    private CustomerSession $customerSession;
+
     public function __construct(CustomerSession $customerSession)
     {
         $this->customerSession = $customerSession;
